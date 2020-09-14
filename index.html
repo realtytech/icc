@@ -22,14 +22,12 @@
 
 
 
-    <script src="main.js"></script>
-
 
 
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="screen and (min-width: 601px)" href="widescreen.css">
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="widescreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 1199px)" href="smallscreen.css">
 </head>
 
 <body>
@@ -46,8 +44,8 @@
                 </div>
             </div>
         </div>
-        <nav id="desktop-nav">
-            <h1>
+        <nav id="desktop-nav" class="mx-auto">
+            <h1 id="menu" onclick="openNav()">
                 MENU
             </h1>
             <div class="nav-icons">
@@ -64,11 +62,21 @@
             <div id="bottom-icons">
             </div>
         </nav>
+        <div id="mySidenav" class="sidenav">
+            <a onclick="closeNav()" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a onclick="closeNav()" href="#about-section">About</a>
+            <a onclick="closeNav()" href="#amenities-section">Amenities</a>
+            <a onclick="closeNav()" href="#apartments-section">Apartments</a>
+            <a onclick="closeNav()" href="#location-section">Location</a>
+            <hr style="margin: 30px;">
+            <a href="#location-section">Book a Site Visit</a>
+
+        </div>
         <div class="container-fluid text-center" style="width: 90vw !important;">
             <!-- About section Starts -->
             <div class="text-center container-fluid">
                 <br> <br> <br>
-                <div class="row">
+                <div class="row p-4" id="about-section">
                     <div class="col-lg-6">
                         <h1>ABOUT</h1>
                         <hr>
@@ -127,7 +135,7 @@
             <div class="text-center container-fluid mr-4">
 
                 <br> <br> <br>
-                <div class="row">
+                <div class="row p-4" id="amenities-section">
                     <div class="col-lg-6">
                         <div id="myCarouselAmenities" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
@@ -194,7 +202,7 @@
             <!-- Apartments section Starts -->
             <div class="text-center container-fluid">
                 <br> <br> <br>
-                <div class="row">
+                <div class="row p-4" id="apartments-section">
                     <div class="col-lg-6 ">
                         <h1>APARTMENTS</h1>
                         <hr>
@@ -286,7 +294,7 @@
             <div class="text-center container-fluid mr-4">
 
                 <br> <br> <br>
-                <div class="row">
+                <div class="row p-4" id="location-section">
                     <div class="col-lg-6">
 
                         <img src="./assets/images/ICC_ConnectivityMap.jpg" alt="" srcset="" width="90%">
@@ -390,16 +398,27 @@
                     <i class="fa fa-whatsapp" aria-hidden="true"></i>
                 </a>
                 <a href="#">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <i class="fa fa-bars" onclick="openNavMobile()" aria-hidden="true"></i>
                 </a>
             </div>
             <div id="bottom-icons">
             </div>
         </nav>
+        <div id="mySidenav-mobile" class="sidenav-mobile">
+            <a onclick="closeNavMobile()" href="javascript:void(0)" class="closebtn" onclick="closeNavMobile()">&times;</a>
+            <a onclick="closeNavMobile()" href="#m-about-section">About</a>
+            <a onclick="closeNavMobile()" href="#m-amenities-section">Amenities</a>
+            <a onclick="closeNavMobile()" href="#m-apartments-section">Apartments</a>
+            <a onclick="closeNavMobile()" href="#m-connectivity-section">Connectivity</a>
+            <a onclick="closeNavMobile()" href="#m-location-section">Location</a>
+            <hr style="margin: 30px;">
+            <a href="#location-section">Book a Site Visit</a>
+
+        </div>
         <div class="container-fluid text-center" style="width: 100vw !important;">
             <!-- About section Starts -->
             <div class="text-center container-fluid">
-                <div class="row">
+                <div class="row" id="m-about-section">
                     <div class="col-lg-6">
                         <h1>ABOUT</h1>
                         <hr>
@@ -458,7 +477,7 @@
             <div class="text-center container-fluid mr-4">
 
                 <br> <br> <br>
-                <div class="row">
+                <div class="row" id="m-amenities-section">
 
                     <div class="col-lg-6">
                         <h1>AMENITIES</h1>
@@ -527,7 +546,7 @@
             <!-- Apartments section Starts -->
             <div class="text-center container-fluid">
                 <br> <br> <br>
-                <div class="row">
+                <div class="row" id="m-apartments-section">
                     <div class="col-lg-6 ">
                         <h1>APARTMENTS</h1>
                         <hr>
@@ -620,7 +639,7 @@
             <div class="text-center container-fluid mr-4">
 
                 <br> <br> <br>
-                <div class="row">
+                <div class="row" id="m-connectivity-section">
                     <div class="col-lg-6">
                         <h1>CONNECTIVITY</h1>
                         <hr>
@@ -629,7 +648,7 @@
 
 
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" id="m-location-section">
                         <h1>LOCATION</h1>
                         <hr>
                         <div class="p-4">
@@ -711,6 +730,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
     </script>
+
+    <script src="main.js"></script>
 
 
 </body>
