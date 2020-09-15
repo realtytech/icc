@@ -13,7 +13,7 @@ body {
 #hero-div {
     height: 100vh;
     width: 140vw;
-    background: url('./assets/images/Byculla\ 50x20-CTC-01.png') no-repeat;
+    background: url('./assets/images/hero-img.webp') no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -182,4 +182,7 @@ h1 {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+  }
+  .glyphicon{
+      display: none;
   }
