@@ -8,7 +8,7 @@ function openNav() {
   $(document).ready(function(){
     $('#one-tab').click();
     $('#one-tab-mobile').click();
-    showModal('interest');
+    // showModal('interest');
   });
   $('#one-tab-mobile').trigger( "click" );
   function openNavMobile() {
