@@ -12,3 +12,12 @@
   #myTab{
     overflow: hidden;
   }
+
+  .btn-dark-modal {
+    background-color: #111;
+    color: #fff;
+}
+
+a{
+  overflow: hidden;
+}

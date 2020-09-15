@@ -50,7 +50,7 @@
             </h1>
             <div class="nav-icons">
                 <a href="#">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <i class="fa fa-envelope" aria-hidden="true" onclick="showModal('contact')"></i>
                 </a>
                 <a href="#">
                     <i class="fa fa-phone" aria-hidden="true"></i>
@@ -69,7 +69,7 @@
             <a onclick="closeNav()" href="#apartments-section">Apartments</a>
             <a onclick="closeNav()" href="#location-section">Location</a>
             <hr style="margin: 30px;">
-            <a href="#location-section">Book a Site Visit</a>
+            <a onclick="showModal('visit');closeNav()">Book a Site Visit</a>
 
         </div>
         <div class="container-fluid text-center" style="width: 90vw !important;">
@@ -189,7 +189,7 @@
                                 <li>Kids Play Area, Cricket Net, Tennis Court ...</li>
                             </div>
 
-                            <button class="btn-dark">
+                            <button class="btn-dark" onclick="showModal('brochure')">
                                 Download Brochure
                             </button>
                         </div>
@@ -208,8 +208,9 @@
                         <hr>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="one-tab-mobile" data-toggle="tab" href="#one-m" role="tab"
-                                    aria-controls="one-m" aria-selected="true" aria-expanded="true">ONE ICC</a>
+                                <a class="nav-link active" id="one-tab-mobile" data-toggle="tab" href="#one-m"
+                                    role="tab" aria-controls="one-m" aria-selected="true" aria-expanded="true">ONE
+                                    ICC</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab"
@@ -327,7 +328,7 @@
                                 </style>
                             </div>
 
-                            <button type="button" class="btn-dark" data-toggle="modal" data-target="#exampleModal">
+                            <button type="button" class="btn-dark" onclick="showModal('visit')">
                                 Book Site Visit
                             </button>
                         </div>
@@ -342,30 +343,6 @@
             <div class="text-center p-4">
                 Disclaimer:
             </div>
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Book A Site Visit</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
 
 
@@ -389,7 +366,7 @@
 
             <div class="nav-icons">
                 <a href="#">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <i class="fa fa-envelope" aria-hidden="true" onclick="showModal('contact')"></i>
                 </a>
                 <a href="#">
                     <i class="fa fa-phone" aria-hidden="true"></i>
@@ -405,14 +382,15 @@
             </div>
         </nav>
         <div id="mySidenav-mobile" class="sidenav-mobile">
-            <a onclick="closeNavMobile()" href="javascript:void(0)" class="closebtn" onclick="closeNavMobile()">&times;</a>
+            <a onclick="closeNavMobile()" href="javascript:void(0)" class="closebtn"
+                onclick="closeNavMobile()">&times;</a>
             <a onclick="closeNavMobile()" href="#m-about-section">About</a>
             <a onclick="closeNavMobile()" href="#m-amenities-section">Amenities</a>
             <a onclick="closeNavMobile()" href="#m-apartments-section">Apartments</a>
             <a onclick="closeNavMobile()" href="#m-connectivity-section">Connectivity</a>
             <a onclick="closeNavMobile()" href="#m-location-section">Location</a>
             <hr style="margin: 30px;">
-            <a href="#location-section">Book a Site Visit</a>
+            <a data-toggle="modal" data-target="#siteVisitModal">Book a Site Visit</a>
 
         </div>
         <div class="container-fluid text-center" style="width: 100vw !important;">
@@ -497,7 +475,7 @@
                                 <li>Kids Play Area, Cricket Net, Tennis Court ...</li>
                             </div>
 
-                            <button class="btn-dark">
+                            <button class="btn-dark" onclick="showModal('brochure')">
                                 Download Brochure
                             </button>
                         </div>
@@ -552,8 +530,8 @@
                         <hr>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="one-tab-mobile" data-toggle="tab" href="#one-mobile" role="tab"
-                                    aria-controls="one" aria-selected="true" aria-expanded="true">ONE ICC</a>
+                                <a class="nav-link active" id="one-tab-mobile" data-toggle="tab" href="#one-mobile"
+                                    role="tab" aria-controls="one" aria-selected="true" aria-expanded="true">ONE ICC</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="two-tab" data-toggle="tab" href="#two-mobile" role="tab"
@@ -674,7 +652,7 @@
                                 </style>
                             </div>
 
-                            <button type="button" class="btn-dark" data-toggle="modal" data-target="#exampleModal">
+                            <button type="button" class="btn-dark" onclick="showModal('visit')">
                                 Book Site Visit
                             </button>
                         </div>
@@ -693,45 +671,83 @@
             <br>
             <br>
             <br>
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Book A Site Visit</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
-    </script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
-    </script>
+    <!-- Generic Modal -->
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header row">
+                    <div class="col-md-10">
+                        <h3 class="modal-title" id="ModalLabel">
+                            Leave a Message
+                        </h3>
 
-    <script src="main.js"></script>
+                    </div>
+                    <div class="col-md-2" style="overflow: hidden;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                    </div>
+                </div>
+                <form action="">
+                    <div class="modal-body">
+                        <div class="form-row">
+                            <div class="col-md-12 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control" name="contact" id="contactNum"
+                                    placeholder="Your Contact No." data-msg="Please enter a valid contact number" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Subject" data-rule="minlen:4"
+                                    data-msg="Please enter at least 4 chars of subject" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea class="form-control" id="msg" name="msg" rows="5" data-rule="required"
+                                    data-msg="Please write something for us" placeholder="Message"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="form-submit" class="form-control btn btn-dark-modal"
+                            onclick="callGas()">Send
+                            Message</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+      
+
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+        </script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+        </script>
+
+        <script src="main.js"></script>
 
 
 </body>
