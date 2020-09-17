@@ -186,3 +186,10 @@ h1 {
   .glyphicon{
       display: none;
   }
+
+  .text-white {
+    position: absolute;
+    bottom: 8vh;
+    left: 4vw;
+
+}

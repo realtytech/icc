@@ -9,6 +9,9 @@ body {
     font-family: 'Montserrat';
     font-size: 22px;
 }
+p {
+    font-size: 1.25vw;
+}
 
 #hero-div {
     height: 100vh;
@@ -92,7 +95,7 @@ body {
 } */
 
 .p-4 {
-    padding: 2.5rem;
+    padding: 0vw;
 }
 
 * {
@@ -101,7 +104,11 @@ body {
 
 .glyphicon {
     overflow: hidden;
+    display: none;
 
+}
+.carousel-control{
+    display: none;
 }
 
 h1 {
@@ -176,4 +183,29 @@ h1 {
   
   #menu:hover{
       cursor: pointer;
+  }
+
+  @media screen and (min-width: 1789) {
+    p,li,  #text{
+        font-size: 24px;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    p,li, #text{
+        font-size: 22px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    p,li, #text{
+        font-size: 18px;
+    }
+    .btn-dark{
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    #apartments-section hr{
+        display: none;
+    }
   }

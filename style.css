@@ -38,6 +38,9 @@ a{
 #sticky-form .btn{
   width: 100% !important;
 }
+#lead-form{
+  margin-top: 1rem;
+}
 #lead-form *{
   font-family: 'Montserrat' !important;font-size: 22px;
   
@@ -49,4 +52,12 @@ a{
 #lead-form .title{
   font-size: 28px;
   text-align: center;
+}
+
+#disclaimer{
+  font-size: small;
+}
+
+.text-white{
+  color: #fff;
 }
