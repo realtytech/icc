@@ -84,8 +84,11 @@
             <a onclick="closeNav()" href="#location-section">Location</a>
             <hr style="margin: 30px;">
             <a onclick="showModal('visit');closeNav()">Book a Site Visit</a>
-
         </div>
+        <script>
+            var myDaemon = '';
+            localStorage.setItem('myTimestamp', Date.now());
+          </script>
         <div class="container-fluid text-center" style="width: 90vw !important;">
             <!-- About section Starts -->
             <div class="text-center container-fluid">
@@ -385,10 +388,10 @@
                 <div class="text-center" id="icc-logo">
                     <img src="./assets/images/drive-download-20200912T093019Z-001/icc-white.png"
                         alt="Island City Center">
-                        <br>
-                    </div>
+                    <br>
                 </div>
-                <p class="text-white">SOUTH MUMBAI</p>
+            </div>
+            <p class="text-white">SOUTH MUMBAI</p>
         </div>
         <nav id="mobile-nav">
 
@@ -426,7 +429,6 @@
                 <script
                     src='//trkr.scdn1.secure.raxcdn.com/t/forms/5f5f2764923d4a24845d1af7/5f60e8487c0dac76c315d298.js'
                     data-form-id='5f60e8487c0dac76c315d298'></script>
-
             </div>
 
             <!-- About section Starts -->
@@ -717,8 +719,31 @@
         </div>
     </div>
 
+    <!-- Sell-Do Modal -->
+    <div class="modal fade" id="sellModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header row">
+                    <div class="col-md-10">
+                        <h3 class="modal-title" id="ModalLabel">
+                        </h3>
+
+                    </div>
+                </div> -->
+                <div class="fixed-close" style="overflow: hidden;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body"></div>
+             
+            </div>
+        </div>
+    </div>
+
     <!-- Generic Modal -->
-    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header row">
@@ -737,6 +762,7 @@
                 </div>
                 <form action="">
                     <div class="modal-body">
+
                         <div class="form-row">
                             <div class="col-md-12 form-group">
                                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
@@ -777,18 +803,19 @@
 
             </div>
         </div>
+    </div> -->
 
 
 
 
-        <script src="assets/vendor/bootstrap/js/jquery-1.12.4.min.js">
-        </script>
+    <script src="assets/vendor/bootstrap/js/jquery-1.12.4.min.js">
+    </script>
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="assets/vendor/bootstrap-3.4.1-dist/js/bootstrap.min.js">
-        </script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="assets/vendor/bootstrap-3.4.1-dist/js/bootstrap.min.js">
+    </script>
 
-        <script src="main.js"></script>
+    <script src="main.js"></script>
 
 
 </body>

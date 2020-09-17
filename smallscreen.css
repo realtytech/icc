@@ -11,7 +11,7 @@ body {
 }
 
 #hero-div {
-    height: 100vh;
+    height: 93vh;
     width: 140vw;
     background: url('./assets/images/hero-img.webp') no-repeat;
     background-size: cover;
@@ -189,6 +189,7 @@ h1 {
 
   .text-white {
     position: absolute;
+    font-weight: 900;
     bottom: 8vh;
     left: 4vw;
 

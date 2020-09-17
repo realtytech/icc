@@ -185,19 +185,9 @@ h1 {
       cursor: pointer;
   }
 
-  @media screen and (min-width: 1789) {
-    p,li,  #text{
-        font-size: 24px;
-    }
-  }
 
-  @media screen and (min-width: 1600px) {
-    p,li, #text{
-        font-size: 22px;
-    }
-  }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) and (max-width:1600px) {
     p,li, #text{
         font-size: 18px;
     }
@@ -207,5 +197,21 @@ h1 {
     }
     #apartments-section hr{
         display: none;
+    }
+  }
+  @media screen and (min-width: 1600px) and (max-width:1789px){
+    p,li, #text{
+        font-size: 22px;
+    }
+  }
+  @media screen and (min-width: 1789)and (max-width:2000px) {
+    p,li,  #text{
+        font-size: 24px;
+    }
+  }
+
+  @media screen and (min-width: 2000) {
+    p,li,  #text{
+        font-size: 44px;
     }
   }
